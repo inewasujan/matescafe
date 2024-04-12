@@ -1,35 +1,54 @@
-import React from 'react'
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
+import React from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <Hero />
-      <div className="w-full h-screen relative flex flex-col justify-between items-center">
-        <h1 className='font-extrabold text-6xl'>~ We love to make food ~</h1>
-        <div className="flex flex-x-2 items-center my-10">
-          <div>
-            <Image 
-              src="/images/barista.jpg"
+      <div className="relative px-4 md:px-10 lg:px-20 py-10 md:py-20 lg:py-32">
+        <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl text-center md:text-left">
+          Food<span className="text-orange-300"> enthusiasts,</span> let's celebrate.
+        </h1>
+        <div className="flex flex-col md:flex-row items-center my-10">
+          <div className="w-full md:w-1/2 mx-4 md:mx-0 md:m-20">
+            <Image
+              src="/images/square.jpg"
               alt="food"
-              width={640}
-              height={440}
+              width={1080}
+              height={1080}
+              className="object-cover"
             />
-
           </div>
-          <div className='mx-20'>
-            <h1 className="text-6xl font-bold mb-4">Food</h1>
-            <p className="pb-4">We love to keep clean kitchen, cook tasty food and want to see beautiful smiles of every customer who walks in.</p>
-            <p>We think of customer as part of our <span className="text-orange-300 font-semibold">MATESCAFE</span> family.</p>
-            <Button variant="secondary" className="bg-black font-medium text-white rounded-none p-4 mt-5">VIEW MENU</Button>
+          <div className="w-full md:w-1/2 mx-4 md:m-20">
+            <h2 className="font-bold text-4xl lg:text-6xl my-8 text-center md:text-left">
+              Food
+            </h2>
+            <div className="text-lg md:text-xl">
+              <p className="text-center md:text-left">
+                We love to keep a clean kitchen, cook tasty food, and want to see
+                beautiful smiles on every customer who walks in.<br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                tenetur error, harum nesciunt ipsum debitis quas aliquid.<br />        
+                We think of customers as part of our
+                <span className="text-orange-300 font-semibold"> MATESCAFE </span>
+                family.
+              </p>
+              <Button className= "my-8 px-8 py-5 md:py-7 tracking-wide bg-black font-bold hover:text-orange-300 text-base md:text-lg hover:scale-110 transition-transform duration-300 ease-in-out">
+                VIEW MENU
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-  )
+  );
 }

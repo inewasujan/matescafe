@@ -1,29 +1,65 @@
-import React from 'react'
-import Image from 'next/image'
-import { Button } from "@/components/ui/button";
+"use client";
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+
+const images = [
+  {
+    url: '/images/hero.jpg',
+  },
+  {
+    url: '/images/barista1.jpg',
+  },
+  {
+    url: '/images/girl.jpg',
+  },
+  {
+    url: '/images/chef.jpg',
+  },
+  
+];
 
 export default function Hero() {
-  return (
-    <div className='w-full h-screen relative mb-20'>
-        <div>
-        <Image 
-            className='w-full h-screen object-cover mb-10'
-            src="/images/hero.jpg"
-            alt="hero"
-            width={1920}
-            height={1080}
-            />
-        </div>
-        <div className="absolute font-semibold bottom-52 left-24 lg:text-4xl  text-white tracking-wide">
-          <p>
-              Though best <span className="text-orange-300">food</span> in town
-          </p>
-          <p>
-              costs you <span className="text-orange-300">more?</span>
-          </p>
-          <Button variant="secondary" className="bg-black font-medium text-white rounded-none p-4 mt-5">B00K NOW</Button>
-        </div>
-    </div>
+  const [currentImage, setCurrentImage] = useState(0);
 
-  )
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentImage]);
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  return (
+    <div className='relative h-screen flex justify-center items-center'>
+      <div className='absolute w-full'>
+        <Image
+          src={images[currentImage].url}
+          alt='hero'
+          width={1280}
+          height={1280}
+          className='object-cover w-full '
+        />
+      </div>
+      <div className='absolute text-white text-center font-bold tracking-tighter lg:text-8xl md:text-6xl left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center  lg:p-20'>
+        <p>
+          Thought best food in town
+        </p>
+        <p>
+          costs you more?
+        </p>
+        <Button className='px-8 py-7 mt-10 tracking-wide bg-black font-bold hover:text-orange-300 text-lg lg:text-xl hover:scale-110 transition-transform duration-300 ease-in-out'>
+          BOOK NOW
+        </Button>
+      </div>
+      
+    </div>
+  );
 }
