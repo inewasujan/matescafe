@@ -22,7 +22,7 @@ const TwoColumnLayout = () => {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="relative h-screen flex flex-row justify-between items-center px-4 md:px-10 lg:px-40 py-10 md:py-20 lg:py-32">
         <div>Testimonial</div>
         <div>
             <Image

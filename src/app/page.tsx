@@ -3,17 +3,18 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import TwoColumnLayout from "@/components/slider.js";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <Hero />
-      <div className="relative px-4 md:px-10 lg:px-20 py-10 md:py-20 lg:py-32">
+      <div className="relative flex flex-col justify-center items-center px-4 md:px-10 lg:px-40 py-10 md:py-20 lg:py-32">
         <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl text-center md:text-left">
           Food<span className="text-orange-300"> enthusiasts,</span> let's celebrate.
         </h1>
-        <div className="flex flex-col md:flex-row items-center my-10">
+        <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mx-4 md:mx-0 md:m-20">
             <Image
               src="/images/square.jpg"
@@ -49,6 +50,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <TwoColumnLayout />
     </div>
   );
 }
