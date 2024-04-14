@@ -3,7 +3,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import TwoColumnLayout from "@/components/slider.js";
+import Footer  from "@/components/Footer";
+import testimonials from "../../data/data";
+import TestimonialSliderCard from "@/components/testimonials-slider";
 
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mx-4 md:mx-0 md:m-20">
             <Image
-              src="/images/square.jpg"
+              src="/images/slides/3.jpg"
               alt="food"
               width={1080}
               height={1080}
@@ -49,8 +51,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <TwoColumnLayout />
+      </div>  
+      <div className="relative flex flex-row items-center mx-40 my-20">
+        <div className="w-1/2">
+          <TestimonialSliderCard testimonials={testimonials} />   
+        </div>
+        <div>
+          <Image 
+            src="/images/slides/4.jpg"
+            alt="food"
+            width={1080}
+            height={1080}
+            className="object-cover" />
+        </div>            
+      </div>     
+      <Footer />
     </div>
   );
 }
