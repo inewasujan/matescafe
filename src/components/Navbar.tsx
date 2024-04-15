@@ -12,8 +12,9 @@ export default function Navbar() {
 
   return (
     <nav className="z-[999] relative">
-      <div className="fixed inset-x-0 top-0 flex justify-between items-center py-6 bg-white px-4 md:px-40">
+      <div className="fixed inset-x-0 top-0 flex justify-between items-center py-5 bg-white md:px-40">
         <div className="flex items-center gap-1">
+          <Link href="/">
           <Image
             src="/logo.svg"
             alt="logo"
@@ -21,6 +22,7 @@ export default function Navbar() {
             width={40}
             className="hover:scale-150 transition-transform duration-300 ease-in-out cursor-pointer"
           />
+          </Link>
           <h2 className=" text-xl font-extrabold text-slate-950">
             MATESCAFE
           </h2>
@@ -61,7 +63,7 @@ export default function Navbar() {
             </Link>
             <Link
               className="font-bold hover:text-orange-300 hover:scale-125 transition-transform duration-300 ease-in-out"
-              href="/about"
+              href="/components/About"
             >
               About
             </Link>
@@ -74,7 +76,7 @@ export default function Navbar() {
             <Button
               className="font-bold bg-black hover:text-orange-300 hover:scale-125 transition-transform duration-300 ease-in-out "
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/components/Footer">Contact Us</Link>
             </Button>
           </div>
         </div>
