@@ -12,10 +12,7 @@ const images = [
   },
   {
     url: '/images/girl.jpg',
-  },
-  {
-    url: '/images/chef.jpg',
-  },
+  }
 ];
 
 export default function Hero() {

@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="z-[999] relative">
-      <div className="fixed inset-x-0 top-0 flex justify-between items-center py-5 bg-white md:px-40">
+      <div className="fixed inset-x-0 top-0 flex justify-between items-center py-5 bg-white md:px-56">
         <div className="flex items-center gap-1">
           <Link href="/">
           <Image
@@ -54,29 +54,12 @@ export default function Navbar() {
           </button>
         </div>
         <div className="hidden md:block">
-          <div className="grid grid-cols-4 text-lg items-center">
-            <Link
-              className="font-bold hover:text-orange-300 hover:scale-125 transition-transform duration-300 ease-in-out"
-              href="/"
-            >
-              Home
-            </Link>
-            <Link
-              className="font-bold hover:text-orange-300 hover:scale-125 transition-transform duration-300 ease-in-out"
-              href="/components/About"
-            >
-              About
-            </Link>
-            <Link
-              className="font-bold hover:text-orange-300 hover:scale-125 transition-transform duration-300 ease-in-out"
-              href="/menu"
-            >
-              Menu
-            </Link>
-            <Button
-              className="font-bold bg-black hover:text-orange-300 hover:scale-125 transition-transform duration-300 ease-in-out "
-            >
-              <Link href="/components/Footer">Contact Us</Link>
+          <div className="grid grid-cols-4 text-lg items-center font-bold">
+            <Link className="" href="/">Home</Link>
+            <Link className="" href="/about">About</Link>
+            <Link className="" href="/menu">Menu</Link>
+            <Button className="bg-black hover:text-orange-300 hover:scale-125 transition-transform duration-300 ease-in-out ">
+              <Link href="/Footer">Contact Us</Link>
             </Button>
           </div>
         </div>
@@ -85,7 +68,7 @@ export default function Navbar() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-4">
             <Link
-              className="block font-bold py-2 hover:text-orange-300 transition duration-300"
+              className="block font-bold py-2 hover:underline-offset-1 transition duration-300"
               href="/"
             >
               Home
@@ -102,7 +85,7 @@ export default function Navbar() {
             >
               About
             </Link>
-            <Button className="font-bold bg-orange-300 hover:text-orange-300 hover:scale-110 transition-transform duration-300 ease-in-out mt-4">
+            <Button  className="font-bold bg-orange-300 hover:text-orange-300 hover:scale-110 transition-transform duration-300 ease-in-out mt-4">
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
