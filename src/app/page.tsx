@@ -12,34 +12,8 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      <About />
-      {/* <div className="relative flex flex-row items-center mx-40">
-        <div className="w-1/2">
-          <TestimonialSliderCard testimonials={testimonials} />
-        </div>
-        <div className="">
-          <div className="relative">
-            <Image
-              src="/images/square.jpg"
-              alt="food"
-              width={600}
-              height={450}
-              className="object-cover h-[70vh] "
-            />
-          </div>
-          <div className="absolute right-0 top-96">
-            <Image
-              src="/images/slides/4.jpg"
-              alt="food"
-              width={500}
-              height={500}
-              className="object-cover h-[50vh]"
-            />
-          </div>
-        </div>
-      </div> */}
-
-<div className="container mx-auto relative flex flex-row items-center content-center my-20">
+      <About />    
+      <div className="container mx-auto relative flex flex-row items-center content-center my-20">
         <div className="max-w-xl">
           <TestimonialSliderCard testimonials={testimonials} />
         </div>
@@ -60,8 +34,6 @@ export default function Home() {
             />
         </div>
       </div>
-
-
       <Footer />
     </div>
   );
