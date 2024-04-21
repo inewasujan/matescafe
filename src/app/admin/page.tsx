@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <div>
       {user ? (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center pt-44">
           <p>User is logged in</p>
 
           <SignOutButton />

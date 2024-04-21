@@ -53,11 +53,12 @@ function LoginPage() {
         />
 
         <button
-          className="bg-[#c7c7c7] rounded-lg p-2 mt-4 mb-2"
+          className="bg-[#c7c7c7] rounded-lg p-2 mt-2"
           disabled={isPending}
         >
           {isPending ? "Logging in..." : "Login"}
         </button>
+        <button className="font-semibold text-lg">Forgot Password?</button>
       </form>
     </div>
 
