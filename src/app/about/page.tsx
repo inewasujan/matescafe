@@ -5,6 +5,7 @@ export default function Page() {
   return (
     <div>
         <Navbar />
+        This is the about page
     </div>
   )
 }
